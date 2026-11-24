@@ -37,7 +37,7 @@ function home(){
   }).join('');
   const wearSizes=[...new Set(products.filter(p=>p.dept==='wear').flatMap(p=>p.sizes))].sort((a,b)=>a-b);
   const sizeOptions=options([['','Все размеры'],...wearSizes.map(size=>[size,size])],'');
-  main.innerHTML='<section class="hero"><div class="hero-copy"><h1>Домашняя одежда в вашем размере</h1><p>Халаты, пижамы и сорочки в размерах от '+wearSizes[0]+' до '+wearSizes.at(-1)+'.</p><form id="wear-picker"><select aria-label="Ваш размер">'+sizeOptions+'</select><button class="action">Показать модели</button></form></div><div class="portraits">'+photo(products[2])+photo(products[6])+'</div></section><h2>Каталог товаров</h2><div class="departments">'+depts+'</div><div class="section-title"><h2>Домашняя одежда</h2><a href="'+catalog('wear')+'">Все модели</a></div>'+cards([products[0],products[4],products[8],products[3]],'#home');
+  main.innerHTML='<section class="hero"><div class="hero-copy"><h1>Текстиль центр</h1><p class="warehouse-offer">Огромный склад текстиля в центре Уфы</p><a class="action wholesale" href="tel:+73472164800"><span>Запросить оптовый прайс</span><strong>8 (347) 216-48-00</strong></a></div><div class="portraits">'+photo(products[2])+photo(products[6])+'</div></section><h2>Каталог товаров</h2><div class="departments">'+depts+'</div><div class="section-title"><h2>Домашняя одежда</h2><a href="'+catalog('wear')+'">Все модели</a></div><form id="wear-picker"><select aria-label="Ваш размер">'+sizeOptions+'</select><button class="action">Показать модели</button></form>'+cards([products[0],products[4],products[8],products[3]],'#home');
   const picker=main.querySelector('#wear-picker');
   picker.onsubmit=event=>{
     event.preventDefault();

@@ -4,3 +4,9 @@
 #wear-picker{display:flex;align-items:stretch;gap:8px;flex-wrap:wrap}
 #wear-picker select{background:var(--plum);color:white;border:1px solid #c6a6ba;border-radius:5px;padding:8px}
 @media(max-width:740px){.hero{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr)}.hero h1{font-size:clamp(26px,5.6vw,40px)}.hero .portraits{max-height:none}.hero .action{padding:10px 12px}}
+.hero .warehouse-offer{font-size:clamp(18px,2vw,26px);line-height:1.25;color:white}
+.hero .wholesale{display:inline-flex;flex-direction:column;gap:2px}
+.wholesale strong{white-space:nowrap;font-size:1.15em}
+#wear-picker{margin:0 0 18px}
+#wear-picker .action{background:var(--plum);color:white}
+@media(max-width:540px){.hero{grid-template-columns:minmax(0,1.7fr) minmax(0,.8fr)}.wholesale span{font-size:14px}}
